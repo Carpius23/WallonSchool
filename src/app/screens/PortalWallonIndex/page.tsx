@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Header from '@/atoms/Header/page';
+import Header from '@/components/atoms/Header/page';
 
 const App: React.FC = () => {
   return (
