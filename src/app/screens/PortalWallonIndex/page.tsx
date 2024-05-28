@@ -5,7 +5,7 @@ import Header from '@/components/atoms/Header/page';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className='flex'>
       <Header />
       {/* Resto de tu aplicación */}
     </div>
