@@ -2,13 +2,14 @@
 
 import React from "react"
 import Header from "@/components/atoms/Header/page"
-import burger from "@/components/atoms/burger/page"
+import BurgerMenu from "@/components/atoms/burger/page"
 
 const App: React.FC =()=>{
     return(
 
         <div>
        <Header></Header>
+       <BurgerMenu />
 
        <div className="grid grid-cols-2 grid-rows-2 h-screen px-64 py-24 gap-16 ">
     <div className=" flex flex-col justify-center items-center">
