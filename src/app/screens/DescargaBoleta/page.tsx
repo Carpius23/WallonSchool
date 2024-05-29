@@ -26,8 +26,8 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
-      <BurgerMenu />
-      <div className="flex flex-col items-center justify-center h-screen bg-white overflow-hidden">
+    <div className='h-[70vh]'>
+      <div className="flex flex-col items-center mt-16  h-[100%] bg-white ">
         <div className="relative w-[90%] max-w-[1000px] h-[80%] max-h-[500px] shadow-lg rounded-lg">
           <div className="absolute top-0 left-0 w-full bg-[#D56262] text-white flex items-center justify-between p-4 rounded-t-lg z-20">
             <div className="flex items-center">
@@ -53,6 +53,7 @@ const App: React.FC = () => {
             <FiArrowDownCircle />
           </a>
         </div>
+      </div>
       </div>
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-30" onClick={toggleModal}>

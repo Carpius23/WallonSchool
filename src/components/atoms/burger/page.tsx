@@ -8,8 +8,9 @@ const BurgerMenu = () => {
   };
 
   return (
-    <div className={`w-64 text-white h-fit    p-4 ${isOpen ? 'bg-customBlue bg-opacity-90 z-50' : 'bg-transparent'}`} style={{ position: 'absolute', top: 90, right: 'auto', left: 'auto' }}>
-      
+
+    <div className={`w-64 text-white h-[87.9vh] max-h-screen p-4 ${isOpen ? 'bg-customBlue bg-opacity-90 z-50' : 'bg-transparent'}`} style={{ position: 'absolute', top: 90, right: 'auto', left: 'auto' }}>
+
       <button className="flex text-red" onClick={handleToggle}><img src="/burguer.svg" alt="" /></button>
       {isOpen && (
         <ul className="mt-4 space-y-2">
