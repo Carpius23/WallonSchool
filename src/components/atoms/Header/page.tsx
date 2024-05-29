@@ -4,7 +4,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (  
-    <nav className="bg-customBlue text-white flex items-center p-4 h-24">
+    <nav className="bg-customBlue text-white flex items-center w-full p-4 h-24">
     <header >
       <div className="flex items-center">
         <img src="/logowallon.svg" alt="Logo" className="mr-8 w-16 h-16 mr-2" />
