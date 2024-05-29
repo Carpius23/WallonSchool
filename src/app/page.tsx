@@ -80,6 +80,7 @@ const App: React.FC = () => {
               <button
                 className="underline bg-transparent text-gray-600 hover:text-blue-700 cursor-pointer text-xs"
                 onClick={openModal}
+                type="button"
               >
                 Da clic aquí
               </button>

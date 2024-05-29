@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Header from '@/components/atoms/Header/page';
 import Image from 'next/image';
 import { FiArrowDownCircle, FiInfo } from 'react-icons/fi';
+import BurgerMenu from '@/components/atoms/burger/page';
+
 
 const App: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -24,6 +26,7 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
+      <BurgerMenu />
       <div className="flex flex-col items-center justify-center h-screen bg-white overflow-hidden">
         <div className="relative w-[90%] max-w-[1000px] h-[80%] max-h-[500px] shadow-lg rounded-lg">
           <div className="absolute top-0 left-0 w-full bg-[#D56262] text-white flex items-center justify-between p-4 rounded-t-lg z-20">

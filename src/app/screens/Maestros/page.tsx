@@ -1,6 +1,9 @@
+'use client';
 import React from 'react';
 import ProfesorCard from '@/components/atoms/teachers-card/page';
 import Header from '@/components/atoms/Header/page';
+import BurgerMenu from '@/components/atoms/burger/page';
+
 
 const App: React.FC = () => {
   const profesores = [
@@ -14,6 +17,7 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
+      <BurgerMenu />
       
       <h1 className="text-3xl font-bold my-6  rounded-md p-4 text-center">Profesores</h1>
       <div className="min-h-screen bg-gray-100 flex flex-col items-center">
