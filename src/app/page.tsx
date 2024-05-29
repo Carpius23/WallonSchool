@@ -1,8 +1,7 @@
-'use client';
+'use client'
 
 import React, { useState } from 'react';
 import users from '@/server/users';
-import pp from './screens/PortalWallonIndex/page';
 import Modal from '@/components/atoms/ModalLogin/ModalLogin';
 
 interface User {
@@ -19,6 +18,10 @@ const App: React.FC = () => {
   const [loginError, setLoginError] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const saveUserSession = (user: User) => {
+    localStorage.setItem('userSession', JSON.stringify(user));
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const usuario = event.currentTarget.usuario.value;
@@ -27,6 +30,7 @@ const App: React.FC = () => {
     const user: User | undefined = users.find(u => u.usuario === usuario && u.contraseña === contraseña);
 
     if (user) {
+      saveUserSession(user);
       setLoginError('');
       window.location.href = '/screens/PortalWallonIndex';
     } else {
@@ -76,6 +80,7 @@ const App: React.FC = () => {
               <button
                 className="underline bg-transparent text-gray-600 hover:text-blue-700 cursor-pointer text-xs"
                 onClick={openModal}
+                type="button"
               >
                 Da clic aquí
               </button>
