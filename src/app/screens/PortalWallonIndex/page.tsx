@@ -5,6 +5,7 @@ import Header from '@/components/atoms/Header/page';
 import BurgerMenu from '@/components/atoms/burger/page';
 import Table from '@/components/atoms/table/table';
 import StudentInfo from '@/components/atoms/StudentInfo/page';
+import TablePrint from '@/components/atoms/tablePrint/tablePrint';
 const App: React.FC = () => {
   return (
     <div className='flex flex-wrap'>
@@ -14,7 +15,7 @@ const App: React.FC = () => {
       <div className="container mx-auto p-8">
           
         
-          <Table />
+          <TablePrint />
           
         </div>
     </div>
