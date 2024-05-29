@@ -20,12 +20,16 @@ const ProfesorCard: React.FC<ProfesorCardProps> = ({ nombre, materia }) => {
       onClick={handleClick}
     >
       {showInfo ? (
-        <div className="bg-blue-800 text-white p-4 rounded-md">
+        <div className="mb-8 bg-blue-800 text-white p-4 rounded-md">
           <ul className="text-left space-y-2">
             <li><strong>Salón:</strong> 2</li>
             <li><strong>Correo electrónico:</strong> ana.garcia@example.com</li>
             <li><strong>Número de teléfono:</strong> +1 (555) 123-4567</li>
           </ul>
+          <div className="textmt-4 p-4 bg-white rounded-md">
+            <p className="text-black font-bold text-lg">{nombre}</p>
+            <p className="text-black">{materia}</p>
+          </div>
         </div>
       ) : (
         <>
@@ -36,7 +40,7 @@ const ProfesorCard: React.FC<ProfesorCardProps> = ({ nombre, materia }) => {
           />
           <div className="mt-4 p-4 bg-gray-200 rounded-md">
             <p className="font-bold text-lg">{nombre}</p>
-            <p className="text-gray-700">{materia}</p>
+            <p className="text-black">{materia}</p>
           </div>
         </>
       )}
