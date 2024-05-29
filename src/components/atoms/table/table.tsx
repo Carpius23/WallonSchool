@@ -24,7 +24,7 @@ const Table: React.FC = () => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full border-collapse">
-        <thead>
+        <thead className='bg-smoke'>
           <tr>
             <th className="px-4 py-2 border">Año</th>
             <th className="px-4 py-2 border">Periodo</th>
@@ -36,13 +36,13 @@ const Table: React.FC = () => {
         </thead>
         <tbody>
           {data.map((row, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-blue-200' : 'bg-blue-500 text-white'}>
-              <td className="px-4 py-2 border">{row.year}</td>
-              <td className="px-4 py-2 border">{row.period}</td>
-              <td className="px-4 py-2 border">{row.subject}</td>
-              <td className="px-4 py-2 border">{row.teacher}</td>
-              <td className={`px-4 py-2 border ${row.grade < 6 ? 'text-red-500': 'text-black'}`}>{row.grade}</td>
-              <td className={`px-4 py-2 border ${row.homeworkMissed < 5 ? 'text-red-500' : ''}`}>{row.homeworkMissed}</td>
+            <tr key={index} className={index % 2 === 0 ? 'bg-customLightBlue' : 'bg-customLigthLightBlue text-black'}>
+              <td className="px-4 py-4 border">{row.year}</td>
+              <td className="px-4 py-4 border">{row.period}</td>
+              <td className="px-4 py-4 border">{row.subject}</td>
+              <td className="px-4 py-4 border">{row.teacher}</td>
+              <td className={`px-4 py-4 border ${row.grade < 6 ? 'text-red-500': 'text-black'}`}>{row.grade}</td>
+              <td className={`px-4 py-4 border ${row.homeworkMissed > 0 ? 'text-red-500' : ''}`}>{row.homeworkMissed}</td>
             </tr>
           ))}
         </tbody>
