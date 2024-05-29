@@ -26,23 +26,23 @@ const Table: React.FC = () => {
       <table className="min-w-full border-collapse">
         <thead className='bg-smoke'>
           <tr>
-            <th className="px-4 py-2 border">Año</th>
-            <th className="px-4 py-2 border">Periodo</th>
-            <th className="px-4 py-2 border">Materia</th>
-            <th className="px-4 py-2 border">Profesor</th>
-            <th className="px-4 py-2 border">Calificación</th>
-            <th className="px-4 py-2 border">Faltas de Tarea</th>
+            <th className="px-4 py-2 border rounded-tl-lg text-center">Año</th>
+            <th className="px-4 py-2 border text-center">Periodo</th>
+            <th className="px-4 py-2 border text-center">Materia</th>
+            <th className="px-4 py-2 border text-center">Profesor</th>
+            <th className="px-4 py-2 border text-center">Calificación</th>
+            <th className="px-4 py-2 border text-center rounded-tr-lg">Faltas de Tarea</th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-customLightBlue' : 'bg-customLigthLightBlue text-black'}>
-              <td className="px-4 py-4 border">{row.year}</td>
-              <td className="px-4 py-4 border">{row.period}</td>
-              <td className="px-4 py-4 border">{row.subject}</td>
-              <td className="px-4 py-4 border">{row.teacher}</td>
-              <td className={`px-4 py-4 border ${row.grade < 6 ? 'text-red-500': 'text-black'}`}>{row.grade}</td>
-              <td className={`px-4 py-4 border ${row.homeworkMissed > 0 ? 'text-red-500' : ''}`}>{row.homeworkMissed}</td>
+            <tr  key={index} className={ index % 2 === 0 ? 'bg-customLightBlue' : 'bg-customLigthLightBlue text-black'} >
+              <td className="px-4 py-4 border text-center">{row.year}</td>
+              <td className="px-4 py-4 border text-center">{row.period}</td>
+              <td className="px-4 py-4 border text-center">{row.subject}</td>
+              <td className="px-4 py-4 border text-center">{row.teacher}</td>
+              <td className={`px-4 py-4 border text-center ${row.grade < 6 ? 'text-red-500': 'text-black'}`}>{row.grade}</td>
+              <td className={`px-4 py-4 border text-center ${row.homeworkMissed > 0 ? 'text-red-500' : ''}`}>{row.homeworkMissed}</td>
             </tr>
           ))}
         </tbody>

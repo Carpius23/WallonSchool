@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import users from '@/server/users';
+import pp from './screens/PortalWallonIndex/page';
 import Modal from '@/components/atoms/ModalLogin/ModalLogin';
 
 interface User {
@@ -27,7 +28,7 @@ const App: React.FC = () => {
 
     if (user) {
       setLoginError('');
-      window.location.href = 'https://www.youtube.com/';
+      window.location.href = '/screens/PortalWallonIndex';
     } else {
       setLoginError('Usuario o contraseña incorrectos');
     }
