@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '@/components/atoms/Header/page';
 import Image from 'next/image';
 import { FiArrowDownCircle, FiInfo } from 'react-icons/fi';
+import BurgerMenu from '@/components/atoms/burger/page';
 
 const RegistroEvento: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -19,6 +20,7 @@ const RegistroEvento: React.FC = () => {
 
   return (
     <>
+    <BurgerMenu />
       <Header />
       <div className='h-[70vh] flex justify-center items-center'>
         <div className="w-[90%] max-w-[1000px] h-[80%] max-h-[500px] shadow-lg rounded-lg relative">
