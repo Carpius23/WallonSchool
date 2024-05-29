@@ -29,7 +29,7 @@ const TablePrint: React.FC = () => {
   return (
    
     <div>
-      <div className='flex'><StudentInfo/></div>
+      <StudentInfo/>
     <div className="overflow-x-auto">
       
     <h1 className="text-2xl font-bold mb-4">Tabla de Calificaciones</h1>

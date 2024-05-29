@@ -1,6 +1,6 @@
 const users = [
     {
-        foto: "/public/niño1.svg",
+        foto: "/niño1.svg",
         id: 1,
         nombre: "Juan Carlos Contreras Zúñiga",
         usuario: "juanconzun",
@@ -11,7 +11,7 @@ const users = [
     },
 
     {
-        foto: "/public/niño2.svg",
+        foto: "/niño2.svg",
         id: 2,
         nombre: "Efrain Rico Galvan",
         usuario: "efrainriga",
@@ -22,7 +22,7 @@ const users = [
     },
 
     {
-        foto: "/public/niño3.svg",
+        foto: "/niño3.svg",
         id: 3,
         nombre: "Jorge Andres Torres",
         usuario: "jorgeandto",
@@ -34,7 +34,7 @@ const users = [
     },
 
     {
-        foto: "/public/niño4.svg",
+        foto: "/niño4.svg",
         id: 4,
         nombre: "Emiliano Guzman Velasco",
         usuario: "emilianoguzvel",
@@ -45,7 +45,7 @@ const users = [
     },
 
     {
-        foto: "/public/niño5.svg",
+        foto: "/niño5.svg",
         id: 5,
         nombre: "Ulises Rangel Rico",
         usuario: "ulisesranric",
@@ -56,7 +56,7 @@ const users = [
     },
 
     {
-        foto: "/public/niño6.svg",
+        foto: "/niño6.svg",
         id: 6,
         nombre: "Marco Gael Brito Contreras",
         usuario: "marcogaelbritcon",
