@@ -5,6 +5,37 @@ import Header from '@/components/atoms/Header/page';
 import Image from 'next/image';
 import { FiArrowDownCircle, FiInfo } from 'react-icons/fi';
 import BurgerMenu from '@/components/atoms/burger/page';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+import { createRoot } from 'react-dom/client';
+import Table from '@/components/atoms/table/table';
+
+const downloadPdf = async () => {
+  
+  const container = document.createElement('div');
+  container.id = 'table-to-pdf';  
+  document.body.appendChild(container);
+
+  const root = createRoot(container);
+  root.render(<Table />);
+
+  
+  setTimeout(async () => {
+    const canvas = await html2canvas(container);
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF();
+    const imgProps = pdf.getImageProperties(imgData);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('download.pdf');
+
+  
+    root.unmount();
+    document.body.removeChild(container);
+  },10); 
+};
+
 
 
 const App: React.FC = () => {
@@ -25,6 +56,7 @@ const App: React.FC = () => {
 
   return (
     <>
+    <BurgerMenu />
       <Header />
     <div className='h-[70vh]'>
       <div className="flex flex-col items-center mt-16  h-[100%] bg-white ">
@@ -32,7 +64,7 @@ const App: React.FC = () => {
           <div className="absolute top-0 left-0 w-full bg-[#D56262] text-white flex items-center justify-between p-4 rounded-t-lg z-20">
             <div className="flex items-center">
               <Image src="/pdf.svg" alt="PDF Icon" width={24} height={24} className="w-8 h-8 mr-2" />
-              <span>PDF - Boleta Juan Reguera Espinoza</span>
+              <span>PDF - Haz click para descargar la boleta</span>
             </div>
             <div>
               <FiInfo className="text-white text-xl cursor-pointer" onClick={toggleModal} />
@@ -45,11 +77,8 @@ const App: React.FC = () => {
             objectFit="cover"
             className="rounded-lg"
           />
-          <a
-            href="/prueba.pdf"
-            download
-            className="absolute inset-0 flex items-center justify-center text-black text-8xl z-10"
-          >
+          <a href="#" onClick={(e) => { e.preventDefault(); downloadPdf(); }}
+            className="absolute inset-0 flex items-center justify-center text-black text-8xl z-10">
             <FiArrowDownCircle />
           </a>
         </div>

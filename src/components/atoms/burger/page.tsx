@@ -14,14 +14,14 @@ const BurgerMenu = () => {
       <button className="flex text-red" onClick={handleToggle}><img src="/burguer.svg" alt="" /></button>
       {isOpen && (
         <ul className="mt-4 space-y-2">
-          <a href="/screens/EventosWallon">
+          <a href="/screens/PortalWallonIndex">
 
           <li className="p-2 flex items-center">
             <img src="/logowallon.svg" alt="Item 1" className="mr-2 pt-2 w-12 " />
-            Eventos Wallon
+            Boleta
           </li>
           </a>
-          <a href="/screens/PortalWallonIndex">
+          <a href="/screens/DescargaBoleta">
 
           <li className="p-2 flex items-center">
             <img src="/historial.svg" alt="Item 3" className="mr-2 pt-2 w-12" />
@@ -36,7 +36,7 @@ const BurgerMenu = () => {
           </li>
           </a>
 
-          <a href="/screens/DescargaPermiso">
+          <a href="/screens/EventosWallon">
 
           <li className="p-2 flex items-center">
             <img src="/extracurriculares.svg" alt="Item 4" className="mr-2 pt-2 w-12" />

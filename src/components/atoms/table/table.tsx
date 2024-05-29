@@ -12,7 +12,6 @@ const Table: React.FC = () => {
   const [userGrades, setUserGrades] = useState<TableRow[]>([]);
 
   useEffect(() => {
-    // Obtener los datos del usuario del local storage
     const userData = JSON.parse(localStorage.getItem('userSession') || '{}');
     const userGradesData = grades.find(g => g.id === userData.id)?.materias.map(m => ({
       subject: m.name,
@@ -25,7 +24,7 @@ const Table: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-x-auto">
+    <div id="table-to-pdf" className="overflow-x-auto">
       <table className="min-w-full border-collapse">
         <thead className='bg-smoke'>
           <tr>
