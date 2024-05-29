@@ -27,7 +27,7 @@ else
           />
         </div>
         <div>
-          <p>{user.nombre}</p>
+          <p classname = "font-semibold ">{user.nombre}</p>
           <p>Grado: {user.grado} de primaria</p>
           <p>Grupo: {user.grupo}</p>
         </div>
