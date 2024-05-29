@@ -9,11 +9,12 @@ interface TableRow {
   homeworkMissed: number;
 }
 
-const Table: React.FC = () => {
+const TablePrint: React.FC = () => {
   
   const [userGrades, setUserGrades] = useState<TableRow[]>([]);
 
   useEffect(() => {
+    // Obtener los datos del usuario del local storage
     const userData = JSON.parse(localStorage.getItem('userSession') || '{}');
     const userGradesData = grades.find(g => g.id === userData.id)?.materias.map(m => ({
       subject: m.name,
@@ -26,14 +27,12 @@ const Table: React.FC = () => {
   }, []);
 
   return (
-
    
     <div>
       <div className='flex'><StudentInfo/></div>
     <div className="overflow-x-auto">
       
     <h1 className="text-2xl font-bold mb-4">Tabla de Calificaciones</h1>
-
       <table className="min-w-full border-collapse">
         <thead className='bg-smoke'>
           <tr>
@@ -60,5 +59,4 @@ const Table: React.FC = () => {
   );
 };
 
-export default Table;
-
+export default TablePrint;
