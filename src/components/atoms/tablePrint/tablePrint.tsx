@@ -9,7 +9,7 @@ interface TableRow {
   homeworkMissed: number;
 }
 
-const Table: React.FC = () => {
+const TablePrint: React.FC = () => {
   
   const [userGrades, setUserGrades] = useState<TableRow[]>([]);
 
@@ -59,5 +59,4 @@ const Table: React.FC = () => {
   );
 };
 
-export default Table;
-
+export default TablePrint;
