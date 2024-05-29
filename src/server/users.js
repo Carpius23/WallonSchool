@@ -1,5 +1,6 @@
 const users = [
     {
+        foto: "/public/niño1.svg",
         id: 1,
         nombre: "Juan Carlos Contreras Zúñiga",
         usuario: "juanconzun",
@@ -10,6 +11,7 @@ const users = [
     },
 
     {
+        foto: "/public/niño2.svg",
         id: 2,
         nombre: "Efrain Rico Galvan",
         usuario: "efrainriga",
@@ -20,6 +22,7 @@ const users = [
     },
 
     {
+        foto: "/public/niño3.svg",
         id: 3,
         nombre: "Jorge Andres Torres",
         usuario: "jorgeandto",
@@ -27,7 +30,41 @@ const users = [
         grupo: 31,
         grado: 2,
         periodo: 1
-    }
+        
+    },
+
+    {
+        foto: "/public/niño4.svg",
+        id: 4,
+        nombre: "Emiliano Guzman Velasco",
+        usuario: "emilianoguzvel",
+        contraseña: "1234",
+        grupo: 30, 
+        grado: 4,
+        periodo: 1,
+    },
+
+    {
+        foto: "/public/niño5.svg",
+        id: 5,
+        nombre: "Ulises Rangel Rico",
+        usuario: "ulisesranric",
+        contraseña: "1234",
+        grupo: 31, 
+        grado: 1,
+        periodo: 3,
+    },
+
+    {
+        foto: "/public/niño6.svg",
+        id: 6,
+        nombre: "Marco Gael Brito Contreras",
+        usuario: "marcogaelbritcon",
+        contraseña: "1234",
+        grupo: 29, 
+        grado: 6,
+        periodo: 2,
+    },
 ]
 
 export function getUserByUsername(username) {
