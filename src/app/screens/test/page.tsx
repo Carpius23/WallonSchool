@@ -1,5 +1,5 @@
 'use client';
-import BurgerMenu from "@/components/atoms/burger/burger";
+import BurgerMenu from "@/components/atoms/burger/Page";
 import Table from "@/components/atoms/tabla/tabla";
 const Test: React.FC = () => {
     return (
