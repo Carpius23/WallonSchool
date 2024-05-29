@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <div className="container mx-auto p-8">
           
         
-          <TablePrint />
+          <Table/>
           
         </div>
     </div>

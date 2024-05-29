@@ -8,7 +8,7 @@ import BurgerMenu from '@/components/atoms/burger/page';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { createRoot } from 'react-dom/client';
-import Table from '@/components/atoms/table/table';
+import TablePrint from '@/components/atoms/tablePrint/tablePrint';
 
 const downloadPdf = async () => {
   
@@ -17,7 +17,7 @@ const downloadPdf = async () => {
   document.body.appendChild(container);
 
   const root = createRoot(container);
-  root.render(<Table />);
+  root.render(<TablePrint />);
 
   
   setTimeout(async () => {

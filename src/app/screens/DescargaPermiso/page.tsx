@@ -41,7 +41,7 @@ const RegistroEvento: React.FC = () => {
             className="rounded-lg"
           />
           <a
-            href="/prueba.pdf"
+            href="/PermisoWallon.pdf"
             download
             className="absolute inset-0 flex items-center justify-center text-black text-8xl z-10"
           >
